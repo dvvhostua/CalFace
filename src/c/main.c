@@ -183,12 +183,12 @@ static void update_time() {
 
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
-  update_time();
+  if(units_changed & DAY_UNIT) {
+    update_calendar();
+  }
+  update_time();  
 }
 
-static void day_handler(struct tm *tick_time, TimeUnits units_changed) {
-  update_calendar();
-}
 
 static void main_window_load(Window *window) {
   
@@ -197,7 +197,6 @@ static void main_window_load(Window *window) {
   
   // Register with TickTimerService
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
-  tick_timer_service_subscribe(DAY_UNIT, day_handler);
 
   // Get information about the Window
   Layer *window_layer = window_get_root_layer(window);
