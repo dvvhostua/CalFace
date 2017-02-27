@@ -1,0 +1,24 @@
+{
+    "author": "dvvhostua@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "calface",
+    "pebble": {
+        "displayName": "CALFACE",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite"
+        ],
+        "uuid": "2c5d2579-a098-466d-9859-3be24ff25b56",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
